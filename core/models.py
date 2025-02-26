@@ -3,6 +3,7 @@ from django.db import models
 
 # About Model
 class About(models.Model):
+    id = models.AutoField(primary_key=True)
     short_description = models.TextField()
     description = models.TextField()
     image = models.ImageField(upload_to="about")
@@ -17,6 +18,7 @@ class About(models.Model):
 
 # Service Model
 class Service(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100, verbose_name="Service name")
     description = models.TextField(verbose_name="About service")
 
@@ -26,6 +28,7 @@ class Service(models.Model):
 
 # Recent Work Model
 class RecentWork(models.Model):
+    id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100, verbose_name="Work title")
     image = models.ImageField(upload_to="works")
 
@@ -35,6 +38,7 @@ class RecentWork(models.Model):
 
 # Client model
 class Client(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100, verbose_name="Client name")
     description = models.TextField(verbose_name="Client say")
     image = models.ImageField(upload_to="clients", default="default.png")

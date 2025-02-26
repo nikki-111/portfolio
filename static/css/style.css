@@ -361,6 +361,20 @@ h6 {
     font-size: 14px;
 
 }
+.profile-img {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.profile-img img {
+    width: 350px; /* Adjust size as needed */
+    height: 350px;
+    /*border-radius: 50%;  Circular Image */
+    object-fit: cover;
+    /* border: 5px solid #fff; */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
 
 /*--- 4. Banner area css ends ---*/
 
@@ -407,32 +421,98 @@ h6 {
 /*--- 5. About area ends ---*/
 
 /*--- 6. Services area css starts ---*/
-.single-service{
-    margin-bottom: 30px;
+/* General Styles */
+#services {
+    background: #f9f9f9;
+    padding: 80px 0;
 }
 
-.single-service i {
-    font-size: 50px;
-    text-align: center;
-    height: 80px;
-    padding-top: 10px;
-    -webkit-transition: all .3s ease 0s;
-    -o-transition: all .3s ease 0s;
-    transition: all .3s ease 0s;
+.section-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
 }
+
+.section-header .subtitle {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Service Card Styles */
+.single-service {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #FF0000,#FF0000); 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.service-icon i {
+    color: #fff;
+    font-size: 36px;
+}
+
 
 .single-service h2 {
-    margin: 20px 0;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-.single-service:hover i {
-    color: #FF0000;
-    padding: 0;
+.single-service p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
 }
-.single-service:hover h2 {
+
+.read-more {
+    display: inline-block;
     color: #FF0000;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.read-more i {
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+}
+
+.read-more:hover {
+    color: #FF0000;
+}
+
+.read-more:hover i {
+    margin-left: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .single-service {
+        margin-bottom: 20px;
+    }
 }
 
 /*--- 6. services area ends ---*/
